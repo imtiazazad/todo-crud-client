@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 
 const Post = ({ post, handleDelete, handleUpdate }) => {
 
-    const { _id, title, description , comment} = post
+    const { _id, customername, description , comment} = post
 
     const [showComment, setComment] = useState(false);
     const [like, setLike] = useState(false);
@@ -33,7 +33,7 @@ const Post = ({ post, handleDelete, handleUpdate }) => {
         <Card className='mx-auto mb-4' style={{ width: '40rem' }}>
             <Card.Body>
                 <div className="d-flex justify-content-between">
-                    <Card.Title className='text-start'>{title}</Card.Title>
+                    <Card.Title className='text-start'>{customername}</Card.Title>
                     <div>
                         <button onClick={() => handleDelete(_id)} className='btn btn-danger me-3'>Delete</button>
                         <button onClick={() => handleUpdate(_id)} className='btn btn-success'>Update</button>
